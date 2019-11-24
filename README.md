@@ -1,24 +1,22 @@
-# README
+# Railsチュートリアル 練習用リポジトリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+production環境で使うgemは除く
+```
+$ bundle install --without production
+```
 
-* Ruby version
+マイグレーションを実行
+```
+$ rails db:migrate
+```
 
-* System dependencies
+テスト実行
+```
+$ rails test
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+サーバーを起動
+```
+$ rails server
+```
