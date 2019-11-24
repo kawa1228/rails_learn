@@ -22,7 +22,12 @@ $ rails server
 ```
 
 Heroku
-https://arcane-inlet-48332.herokuapp.com/ | https://git.heroku.com/arcane-inlet-48332.git
+https://arcane-inlet-48332.herokuapp.com/
+
+deploy
+```
+$ git push heroku master
+```
 
 本番環境のログ取得
 ```
