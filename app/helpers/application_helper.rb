@@ -10,7 +10,3 @@ module ApplicationHelper
     end
   end
 end
-(1..5).each do |number|
-   puts 2 * number
-   puts '--a
-end
