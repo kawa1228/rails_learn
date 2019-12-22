@@ -6,5 +6,7 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
             format: { with: VALID_EMAIL_REGEX },
             uniqueness: { case_sensitive: false }
+  # 新しくレコードが追加されたときだけに適用される性質を持っている（更新時には処理されない）
   has_secure_password
+  validates :password, length: { minimum: 6 }
 end
