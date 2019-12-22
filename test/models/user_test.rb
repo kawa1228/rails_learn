@@ -22,4 +22,13 @@ class UserTest < ActiveSupport::TestCase
       assert_not @user.valid?, "#{invalid_address.inspect} should be valid"
     end
   end
+
+  test "email addreeses should be unique" do
+    # 同じメールアドレスのユーザーは作成させない
+    duplicate_user =  @user.dup
+    # emailの大文字小文字を区別しないため、upcaseにする
+    duplicate_user.email = @user.email.upcase
+    @user.save
+    assert_not duplicate_user.valid?
+  end
 end
